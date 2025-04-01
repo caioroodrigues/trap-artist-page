@@ -1,0 +1,311 @@
+.artist-header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+.neon-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: #8b5cf6;
+  text-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6;
+}
+
+.tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.music-player {
+  background: rgba(30, 30, 30, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.track-list {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.track-list button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.track-list button.active {
+  background: #8b5cf6;
+}
+
+.spotify-embed {
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-button {
+  background: #8b5cf6;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+}
+
+body {
+  background-color: #121212;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+:root {
+  --neon-purple: #8b5cf6;
+  --neon-pink: #ff00ff;
+  --neon-blue: #00ffff;
+  --dark-bg: #0a0a0a;
+  --card-bg: rgba(20, 20, 20, 0.7);
+}
+
+/* Efeitos de Neon */
+@keyframes neon-pulse {
+  0%, 100% { text-shadow: 0 0 5px currentColor, 0 0 10px currentColor; }
+  50% { text-shadow: 0 0 20px currentColor, 0 0 30px currentColor; }
+}
+
+.neon-purple { color: var(--neon-purple); animation: neon-pulse 2s infinite; }
+.neon-pink { color: var(--neon-pink); animation: neon-pulse 2.5s infinite 0.5s; }
+.neon-blue { color: var(--neon-blue); animation: neon-pulse 3s infinite 1s; }
+
+/* Layout Principal */
+.trap-player {
+  background: var(--dark-bg);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.2);
+}
+
+.trap-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.trap-title {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.artist-badge {
+  display: inline-block;
+  background: rgba(139, 92, 246, 0.2);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  border: 1px solid var(--neon-purple);
+}
+
+.pulse-effect {
+  animation: pulse 1.5s infinite;
+  display: inline-block;
+}
+
+/* Lista de Músicas */
+.track-list-container {
+  margin: 2rem 0;
+}
+
+.track-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+.track-card:hover {
+  background: rgba(30, 30, 30, 0.9);
+  transform: translateY(-3px);
+}
+
+.track-card.active {
+  border-color: var(--neon-purple);
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.1), rgba(20, 20, 20, 0.7));
+}
+
+.track-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--neon-purple);
+  margin-right: 1.5rem;
+  min-width: 30px;
+}
+
+.track-info {
+  flex-grow: 1;
+}
+
+.track-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: white;
+}
+
+.track-artist {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.track-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.track-duration {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: monospace;
+}
+
+.fav-button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+
+.fav-button.active {
+  color: var(--neon-pink);
+  transform: scale(1.1);
+}
+
+.fav-button:hover {
+  color: var(--neon-pink);
+}
+
+.playing-indicator {
+  position: absolute;
+  right: 1.5rem;
+  color: var(--neon-purple);
+  animation: pulse 1.5s infinite;
+}
+
+/* Player Spotify */
+.spotify-premium {
+  margin-top: 2rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.spotify-actions {
+  background: rgba(30, 30, 30, 0.9);
+  padding: 1rem;
+  text-align: center;
+}
+
+.spotify-link {
+  background: #1DB954;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+}
+
+.spotify-link:hover {
+  background: #1ed760;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(29, 185, 84, 0.5);
+}
+
+/* Animações */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* Estilos para os ícones */
+.icon-fav {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s;
+}
+
+.fav-button.active .icon-fav {
+  color: #ff00ff;
+  filter: drop-shadow(0 0 5px #ff00ff);
+}
+
+.icon-play {
+  color: #8b5cf6;
+}
+
+.icon-spotify {
+  margin-right: 8px;
+}
+
+/* Layout do card */
+.track-card {
+  display: grid;
+  grid-template-columns: 40px 1fr 70px 100px;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 15px;
+}
+
+.track-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+/* Efeitos de hover */
+.track-card:hover .icon-fav {
+  color: #ff00ff;
+}
+
+.track-card:hover .icon-play {
+  transform: scale(1.1);
+}

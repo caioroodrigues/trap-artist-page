@@ -1,0 +1,196 @@
+/* Variáveis CSS */
+:root {
+  --primary-color: #8b5cf6;
+  --secondary-color: #2e1065;
+  --text-color: #ffffff;
+  --transition-speed: 0.4s;
+}
+
+/* Reset e Estilos Base */
+.artistHeader {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  min-height: 400px;
+  max-height: 800px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container de Fundo */
+.backgroundContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.5);
+  transition: filter var(--transition-speed) ease;
+}
+
+.colorOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 10, 60, 0.6) 0%,
+    rgba(70, 30, 120, 0.3) 100%
+  );
+  mix-blend-mode: multiply;
+}
+
+/* Container de Conteúdo */
+.contentWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.logoContainer {
+  text-align: center;
+  padding: 2rem;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Estilos da Logo */
+.logo {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  filter: 
+    brightness(0) invert(1)
+    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))
+    drop-shadow(0 0 20px var(--primary-color));
+  transition: all var(--transition-speed) ease;
+  margin-bottom: 1.5rem;
+}
+
+/* Tagline */
+.tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--text-color);
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+/* ============= RESPONSIVIDADE ============= */
+
+/* Tablets (768px ou menos) */
+@media (max-width: 768px) {
+  .artistHeader {
+    height: 55vh;
+    min-height: 350px;
+    max-height: 600px;
+  }
+
+  .logo {
+    max-width: 450px;
+  }
+}
+
+/* Tablets pequenos e phones grandes (600px ou menos) */
+@media (max-width: 600px) {
+  .artistHeader {
+    height: 50vh;
+  }
+
+  .logo {
+    max-width: 350px;
+  }
+}
+
+/* Phones médios (428px ou menos - iPhone 12/13) */
+@media (max-width: 428px) {
+  .artistHeader {
+    height: 45vh;
+    min-height: 300px;
+  }
+
+  .logo {
+    max-width: 280px;
+    margin-bottom: 1rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+  }
+}
+
+/* Phones pequenos (375px ou menos - iPhone SE) */
+@media (max-width: 375px) {
+  .artistHeader {
+    height: 40vh;
+    min-height: 250px;
+  }
+
+  .logo {
+    max-width: 240px;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+}
+
+/* Modo paisagem (landscape) */
+@media (max-width: 900px) and (orientation: landscape) {
+  .artistHeader {
+    height: 80vh;
+    min-height: 300px;
+  }
+
+  .logo {
+    max-width: 400px;
+  }
+}
+
+/* Tablets grandes em paisagem (ex: iPad Pro) */
+@media (min-width: 1024px) and (orientation: landscape) {
+  .artistHeader {
+    height: 75vh;
+  }
+}
+
+/* Dispositivos com alta densidade de pixels */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo {
+    filter: 
+      brightness(0) invert(1)
+      drop-shadow(0 0 12px rgba(255, 255, 255, 0.7))
+      drop-shadow(0 0 25px var(--primary-color));
+  }
+}
+
+/* Melhorias para touch */
+@media (hover: none) {
+  .logo {
+    filter: 
+      brightness(0) invert(1)
+      drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))
+      drop-shadow(0 0 15px var(--primary-color));
+  }
+  
+  .backgroundImage {
+    filter: brightness(0.5);
+  }
+}
