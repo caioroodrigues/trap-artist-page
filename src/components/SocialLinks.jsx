@@ -2,9 +2,9 @@ import "../index.css";
 
 const SocialLinks = () => {
   const socials = [
-    { name: "Instagram", url: "#" },
-    { name: "Spotify", url: "#" },
-    { name: "YouTube", url: "#" },
+    { name: "Instagram", url: "https://www.instagram.com/orealyoshi" },
+    { name: "Spotify", url: "https://open.spotify.com/intl-pt/artist/40OLhr6NNkltjCT9DXzo1C?si=7z5GxPmXRO2wAuP5BefzuQ" },
+    { name: "YouTube", url: "https://www.youtube.com/@orealyoshi" },
   ];
 
   return (

@@ -10,21 +10,21 @@ const MusicList = () => {
   const hits = [
     {
       id: 1,
-      title: "Música 1",
+      title: "BM/Fumaçada",
       artist: "Real Yoshi",
       duration: "2:45",
       embedUrl: "https://open.spotify.com/embed/track/1E1pEEjfHWiMBSuZh0hJaj?utm_source=generator"
     },
     {
       id: 2, 
-      title: "Música 2",
-      artist: "Real Yoshi",
+      title: "Peita do Santa",
+      artist: "Real Yoshi, Tirado",
       duration: "3:12",
       embedUrl: "https://open.spotify.com/embed/track/62V62Tundi7h4XJTRg1ZxP?utm_source=generator"
     },
     {
       id: 3,
-      title: "Música 3",
+      title: "Pingente 777",
       artist: "Real Yoshi",
       duration: "2:30",
       embedUrl: "https://open.spotify.com/embed/track/0NcpxNye3KQ5fqTYnY9rZm?utm_source=generator"
